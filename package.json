@@ -1,6 +1,6 @@
 {
   "name": "firestore-rest-adapter",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "description": "Serializes and deserializes firebase typed JSON",
   "main": "dist/index.js",
   "repository": "https://github.com/thetimothyp/firestore-rest-adapter",
@@ -15,6 +15,7 @@
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/webpack": "^5.28.0",
+    "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "declaration-bundler-webpack-plugin": "^1.0.3",
