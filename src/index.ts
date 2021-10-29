@@ -193,3 +193,10 @@ export function serializeField(obj: any): any {
     return { timestampValue: obj.toISOString() };
   }
 }
+
+export default {
+  normalizeDocument,
+  normalizeField,
+  serializeDocument,
+  serializeField,
+};

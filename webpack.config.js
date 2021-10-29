@@ -5,7 +5,11 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'FirestoreRESTAdapter',
+    library: {
+      name: 'FirestoreRESTAdapter',
+      type: 'umd',
+    },
+    globalObject: 'this',
   },
   module: {
     rules: [

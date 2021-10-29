@@ -5,7 +5,10 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist",
     "lib": ["es2015"],
     "resolveJsonModule": true,
-  }
+  },
+  "exclude": ["node_modules", "test"]
 }
