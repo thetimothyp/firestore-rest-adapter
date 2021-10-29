@@ -1,8 +1,10 @@
+import { FirestoreMapValue, FirestoreValue } from './common/types';
+
 /**
  * Normalizes Firebase data object, excluding the top-level
  * `fields` key that is present on Firestore document fetch results
  */
-export function normalizeDocument(obj: any) {
+export function normalizeDocument(obj: FirestoreMapValue): any {
   return normalizeField(obj.fields);
 }
 
@@ -42,7 +44,7 @@ export function normalizeDocument(obj: any) {
  * @param {Object} obj
  * @returns normalized obj
  */
-export function normalizeField(obj: any) {
+export function normalizeField(obj: FirestoreValue): any {
   // Update as needed if more data types are added to User in Firebase
   if (obj.hasOwnProperty('mapValue')) {
     return _normalizeMapValues(obj['mapValue']);
@@ -101,7 +103,7 @@ function _normalizeArrayValues(arrValue: any) {
  * Serializes a normalized object into a Firebase object, inserting the top-level
  * `fields` key that is present on Firestore documents
  */
-export function serializeDocument(obj: any): any {
+export function serializeDocument(obj: any): FirestoreMapValue {
   const fields = Object.keys(obj).reduce((res: any, key: any) => {
     res[key] = serializeField(obj[key]);
     return res;
@@ -142,7 +144,7 @@ export function serializeDocument(obj: any): any {
  * @param {Object} obj
  * @returns normalized obj
  */
-export function serializeField(obj: any): any {
+export function serializeField(obj: any): FirestoreValue {
   if (obj === null) {
     return { nullValue: null };
   }

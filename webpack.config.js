@@ -8,6 +8,7 @@ module.exports = {
     library: {
       name: 'FirestoreRESTAdapter',
       type: 'umd',
+      umdNamedDefine: true,
     },
     globalObject: 'this',
   },
@@ -21,7 +22,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.d.ts'],
+    extensions: ['.ts'],
   },
   mode: 'production',
 };
