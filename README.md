@@ -1,3 +1,47 @@
+# Functionality
+
+The Firestore v1 REST API responds to requests for document fields with a typed data format outlined [here](https://cloud.google.com/firestore/docs/reference/rest/v1/Value). This data is structured like the following:
+
+```js
+{
+  fields: {
+    myObj: {
+      mapValue: {
+        fields: {
+          myString: {
+            stringValue: 'my string'
+          }
+        }
+      }
+    },
+    myArray: {
+      arrayValue: {
+        values: [
+          {
+            myInt: {
+              integerValue: '5'
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+This package converts the data into a more workable object format:
+
+```js
+{
+  myObj: {
+    myString: 'my string'
+  },
+  myArray: [5]
+}
+```
+
+You can mutate the resulting object however you desire. When you need to write the object back to Firestore, call `serializeDocument` on the object and include it as the body of your request.
+
 # Installation
 
 ```bash
@@ -44,50 +88,6 @@ const writeDoc = async (obj) => {
   );
 };
 ```
-
-# Functionality
-
-The Firestore v1 REST API responds to requests for document fields with a typed data format outlined [here](https://cloud.google.com/firestore/docs/reference/rest/v1/Value). This data is structured like the following:
-
-```js
-{
-  fields: {
-    myObj: {
-      mapValue: {
-        fields: {
-          myString: {
-            stringValue: 'my string'
-          }
-        }
-      }
-    },
-    myArray: {
-      arrayValue: {
-        values: [
-          {
-            myInt: {
-              integerValue: '5'
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-This package converts the data into a more workable object format:
-
-```js
-{
-  myObj: {
-    myString: 'my string'
-  },
-  myArray: [5]
-}
-```
-
-You can mutate the resulting object however you desire. When you need to write the object back to Firestore, call `serializeDocument` on the object and include it as the body of your request.
 
 # API
 
