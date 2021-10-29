@@ -4,6 +4,7 @@
   "description": "Serializes and deserializes firebase typed JSON",
   "main": "index.js",
   "repository": "https://github.com/thetimothyp/firestore-rest-adapter",
+  "homepage": "https://github.com/thetimothyp/firestore-rest-adapter",
   "author": "Timothy Park",
   "license": "MIT",
   "scripts": {
