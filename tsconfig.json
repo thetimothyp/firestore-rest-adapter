@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "lib": ["es2015"],
+    "resolveJsonModule": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,43 @@
+{
+  "fields": {
+    "testArray": {
+      "arrayValue": {
+        "values": [
+          {
+            "mapValue": {
+              "fields": {
+                "testBoolean": {
+                  "booleanValue": true
+                },
+                "testTimestamp": {
+                  "timestampValue": "2021-10-28T01:29:18.368Z"
+                },
+                "testString": {
+                  "stringValue": "my awesome string"
+                },
+                "testReference": {
+                  "referenceValue": "ref"
+                },
+                "testInteger": {
+                  "integerValue": "5"
+                },
+                "testDouble": {
+                  "doubleValue": 2.2
+                },
+                "testGeoPoint": {
+                  "geoPointValue": {
+                    "latitude": 12,
+                    "longitude": -5
+                  }
+                },
+                "testNull": {
+                  "nullValue": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
