@@ -1,6 +1,6 @@
 {
   "name": "firestore-rest-adapter",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Serializes and deserializes firebase typed JSON",
   "main": "dist/index.js",
   "repository": "https://github.com/thetimothyp/firestore-rest-adapter",
